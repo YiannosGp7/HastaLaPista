@@ -1,37 +1,50 @@
 public class Email {
-    private int reservationId;
-    private String reservationDateTime;
-    private Track track;
-    private User user;
-    private int requestId;
+    private int emailID;
+    private Reservation reservation;
+    private String subject;
+    private String body;
 
-    public Email(int reservationId, String reservationDateTime, Track track, User user, int requestId) {
-        this.reservationId = reservationId;
-        this.reservationDateTime = reservationDateTime;
-        this.track = track;
-        this.user = user;
-        this.requestId = requestId;
+    public Email(int emailID, Reservation reservation, String subject, String body) {
+        this.emailID = emailID;
+        this.reservation = reservation;
+        this.subject = subject;
+        this.body = body;
     }
 
-    // Getters
-    public int getReservationId() { return reservationId; }
-    public String getReservationDateTime() { return reservationDateTime; }
-    public Track getTrack() { return track; }
-    public User getUser() { return user; }
-    public int getRequestId() { return requestId; }
-
-    // Setters
-    public void setReservationId(int reservationId) { this.reservationId = reservationId; }
-    public void setReservationDateTime(String reservationDateTime) { this.reservationDateTime = reservationDateTime; }
-    public void setTrack(Track track) { this.track = track; }
-    public void setUser(User user) { this.user = user; }
-    public void setRequestId(int requestId) { this.requestId = requestId; }
-
-    public void createEmail() {
-        // Implementation for creating email
+    // Getters and Setters
+    public int getEmailID() {
+        return emailID;
     }
 
-    public void getRequestID() {
-        // Implementation for getting request ID
+    public void setEmailID(int emailID) {
+        this.emailID = emailID;
+    }
+
+    public Reservation getReservation() {
+        return reservation;
+    }
+
+    public void setReservation(Reservation reservation) {
+        this.reservation = reservation;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public void sendEmail() {
+        System.out.println("Email sent to: " + this.reservation.getRenter().getEmail() + " with subject: " + this.subject);
     }
 }

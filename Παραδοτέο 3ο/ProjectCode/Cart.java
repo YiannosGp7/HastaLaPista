@@ -2,7 +2,7 @@ public class Cart {
     private double totalPrice;
 
   
-
+// Getters and Setters
 
 
     public double getTotalPrice() {

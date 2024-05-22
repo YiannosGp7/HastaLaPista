@@ -2,11 +2,7 @@ public class Cart {
     private List<Product> products;
     private double totalPrice;
 
-    // Constructor
-    public Cart() {
-        this.products = new ArrayList<>();
-        this.totalPrice = 0.0;
-    }
+  
 
     // Getters and Setters
     public List<Product> getProducts() {

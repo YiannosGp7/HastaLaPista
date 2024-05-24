@@ -46,13 +46,45 @@ public class Main {
         System.out.println("Renter details:");
         System.out.println("Age: " + renter.getAge());
         
-    
-    
-    
-    
-    
-    
-    
-    
+        // Advertiser actions
+        System.out.println("\nAdvertiser actions:");
+        advertiser.sendRequest();
+        advertiser.fillForm();
+        advertiser.contact();
+        advertiser.myRequests();
+
+        // Print advertiser details
+        System.out.println("Advertiser details:");
+        System.out.println("Ad Duration: " + advertiser.getAdDuration());
+        System.out.println("Offered Money: " + advertiser.getOfferedMoney());
+        System.out.println("Product: " + advertiser.getProduct());
+
+        // Creating a cart
+        Cart cart = new Cart();
+
+        // Creating some products
+        Product product1 = new Product(1, "Product 1", 10.0, "Info for Product 1");
+        Product product2 = new Product(2, "Product 2", 20.0, "Info for Product 2");
+        Product product3 = new Product(3, "Product 3", 15.0, "Info for Product 3");
+
+        // Adding items to the cart
+        System.out.println("\nAdding items to the cart:");
+        cart.addItem(product1);
+        cart.addItem(product2);
+        cart.addItem(product3);
+
+        // Viewing items in the cart
+        System.out.println("\nViewing items in the cart:");
+        cart.viewItems();
+
+        // Removing an item from the cart
+        System.out.println("\nRemoving an item from the cart:");
+        cart.removeItem(product2);
+        cart.viewItems();
+
+        // Checking out
+        System.out.println("\nChecking out:");
+        cart.checkout();
     }
 }
+

@@ -19,8 +19,33 @@ public class Main {
         admin.viewReservations();
     
     
-    
-    
+        // TrackOwner actions
+        System.out.println("\nTrackOwner actions:");
+        trackOwner.sendRequest();
+        trackOwner.fillForm();
+        trackOwner.contact();
+        trackOwner.myRequests();
+
+        // Print trackOwner details
+        System.out.println("TrackOwner details:");
+        System.out.println("Track Length: " + trackOwner.getTrackLength());
+        System.out.println("Track Price: " + trackOwner.getTrackPrice());
+        System.out.println("Track Equipment: " + trackOwner.getTrackEquipment());
+        System.out.println("Track Vehicles: " + trackOwner.getTrackVehicles());
+        System.out.println("Track Location: " + trackOwner.getTrackLocation());
+
+        // Renter actions
+        System.out.println("\nRenter actions:");
+        renter.reserveTrack();
+        renter.setFilters();
+        renter.myReservations();
+        renter.contact();
+        renter.receiveConfEmail();
+
+        // Print renter details
+        System.out.println("Renter details:");
+        System.out.println("Age: " + renter.getAge());
+        
     
     
     

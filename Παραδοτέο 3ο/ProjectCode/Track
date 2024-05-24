@@ -1,0 +1,18 @@
+public class Track {
+    private int trackID;
+    private float length;
+    private double price;
+    private String[] equipment;
+    private String location;
+    private boolean isReserved;
+    private TrackOwner owner;
+
+    public Track(int trackID, float length, double price, String[] equipment, String location, TrackOwner owner) {
+        this.trackID = trackID;
+        this.length = length;
+        this.price = price;
+        this.equipment = equipment;
+        this.location = location;
+        this.isReserved = false;
+        this.owner = owner;
+    }

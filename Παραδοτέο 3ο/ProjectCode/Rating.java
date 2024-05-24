@@ -15,3 +15,31 @@ public class Rating {
     public int getRatingID() {
         return ratingID;
     }
+     public void setRatingID(int ratingID) {
+        this.ratingID = ratingID;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public Renter getRenter() {
+        return renter;
+    }
+
+    public void setRenter(Renter renter) {
+        this.renter = renter;
+    }
+}
